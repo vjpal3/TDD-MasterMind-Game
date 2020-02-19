@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDMasterMindGame", "TDDMasterMindGame\TDDMasterMindGame.csproj", "{339AB008-F20A-4375-9354-0DDC50321956}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDMasterMindGame.Tests", "TDDMasterMindGame.Tests\TDDMasterMindGame.Tests.csproj", "{D52A37D0-6761-452E-BC0C-0C271BA59D53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{339AB008-F20A-4375-9354-0DDC50321956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{339AB008-F20A-4375-9354-0DDC50321956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{339AB008-F20A-4375-9354-0DDC50321956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{339AB008-F20A-4375-9354-0DDC50321956}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D52A37D0-6761-452E-BC0C-0C271BA59D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52A37D0-6761-452E-BC0C-0C271BA59D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52A37D0-6761-452E-BC0C-0C271BA59D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52A37D0-6761-452E-BC0C-0C271BA59D53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED8FBBC3-B1B7-4E8A-8675-D97FE796064B}
+	EndGlobalSection
+EndGlobal

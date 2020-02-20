@@ -55,5 +55,16 @@ namespace TDDMasterMindGame.Tests
 
         }
 
+        [Test]
+        public void IfGameIsWon_ReturnGameStatusIsWonTrue()
+        {
+            game.code = new int[] { 1, 2, 3, 4 };
+            var input = new int[] { 1, 2, 3, 4 };
+
+            var result = game.CheckScore(input);
+
+            Assert.That(result, Is.True);
+        }
+
     }
 }

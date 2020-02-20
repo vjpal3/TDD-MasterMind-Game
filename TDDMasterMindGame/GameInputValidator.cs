@@ -10,7 +10,11 @@ namespace TDDMasterMindGame
     {
         public bool isValid(int[] attempt)
         {
-            throw new NotImplementedException();
+            if (attempt.Length > 4 || attempt.Length < 4)
+            {
+                return false;
+            }
+            return true;
         }
         private bool inputOutofBounds(int[] attempt)
         {

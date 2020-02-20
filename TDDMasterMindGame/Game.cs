@@ -23,12 +23,10 @@ namespace TDDMasterMindGame
             _validator = validator;
         }
 
-        public void CheckScore(int[] input)
+        public bool CheckScore(int[] input)
         {
-            if(input.Length > 4 || input.Length < 4)
-            {
+            if (!_validator.isValid(input))
                 throw new ArgumentException();
-            }
 
             foreach (var i in input)
             {
@@ -40,6 +38,14 @@ namespace TDDMasterMindGame
 
             if (uniqueValues.Count() != input.Length)
                 throw new Exception("input values must be unique");
+
+            for (int i = 0; i < code.Length; i++)
+            {
+                if (code[i] != input[i])
+                    return false;
+            }
+
+            return true ;
         }
     }
 }

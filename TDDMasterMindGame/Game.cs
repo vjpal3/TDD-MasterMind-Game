@@ -23,7 +23,7 @@ namespace TDDMasterMindGame
             _validator = validator;
         }
 
-        public bool CheckScore(int[] input)
+        public string CheckScore(int[] input)
         {
             if (!_validator.isValid(input))
                 throw new ArgumentException();
@@ -34,13 +34,14 @@ namespace TDDMasterMindGame
             if(!_validator.inputNotUnique(input))
                 throw new Exception("input values must be unique");
 
-            for (int i = 0; i < code.Length; i++)
+            _gameStatus.getStatus(code, input);
+
+            if(_gameStatus.GameIsWon)
             {
-                if (code[i] != input[i])
-                    return false;
+                return "Game Status: Won";
             }
 
-            return true ;
+            return "";
         }
     }
 }

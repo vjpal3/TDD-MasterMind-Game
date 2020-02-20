@@ -63,7 +63,7 @@ namespace TDDMasterMindGame.Tests
 
             var result = game.CheckScore(input);
 
-            Assert.That(result, Is.True);
+            Assert.That(result, Is.EqualTo("Game Status: Won"));
         }
 
     }

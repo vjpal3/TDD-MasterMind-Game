@@ -9,23 +9,34 @@ namespace TDDMasterMindGame
     public class GameStatus : IGameStatus
     {
         public bool GameIsWon { get; set; }
-        public int CorrectNumbers;
+        public int CorrectNumbers { get; set; }
 
         public int CorrectPositions;
 
         public void getStatus(int[] code, int[] attempt)
         {
+            
+
             for (int i = 0; i < code.Length; i++)
             {
-                if (code[i] != attempt[i])
+                if (code[i] == attempt[i])
                 {
-                    GameIsWon = false;
-                    break;
+
+                    CorrectNumbers++;
+                    continue;
                 }
-                else 
-                    GameIsWon = true;
+                else if(attempt.Contains(code[i]))
+                {
+                    
+                    CorrectNumbers++;
+                }
+                    
             }
-            
+
+            if (CorrectNumbers == code.Length)
+                GameIsWon = true;
+            else
+                GameIsWon = false;
         }
     }
 }

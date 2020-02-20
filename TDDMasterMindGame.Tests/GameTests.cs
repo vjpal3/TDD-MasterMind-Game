@@ -10,7 +10,20 @@ namespace TDDMasterMindGame.Tests
     [TestFixture]
     public class GameTests
     {
-        Game game = new Game(new CodeGenerator(), new GameStatus(), new GameInputValidator());
+        private Game game;
+
+        [SetUp]
+       public void Setup()
+        {
+            game = new Game(new CodeGenerator(), new GameStatus(), new GameInputValidator());
+        }
+
+        [TearDown]
+        public void Teardown()
+        {
+            game = null;
+        }
+        
 
         [Test]
         public void ThrowExceptionIfAttemptLenghtIsMoreThan4()
@@ -62,9 +75,21 @@ namespace TDDMasterMindGame.Tests
             var input = new int[] { 1, 2, 3, 4 };
 
             var result = game.CheckScore(input);
+            
 
             Assert.That(result, Is.EqualTo("Game Status: Won"));
         }
 
+        [Test]
+        public void If3NumbersAreCorrect_ReturnGameStatusCorrectNumsIs3()
+        {
+            game.code = new int[] { 1, 2, 3, 4 };
+            var input = new int[] { 1, 2, 5, 3 };
+
+            var result = game.CheckScore(input);
+
+            Assert.That(result, Is.EqualTo("Game Status: \nCorrect Numbers: 3"));
+
+        }
     }
 }

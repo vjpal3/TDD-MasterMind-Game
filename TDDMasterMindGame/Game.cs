@@ -35,13 +35,17 @@ namespace TDDMasterMindGame
                 throw new Exception("input values must be unique");
 
             _gameStatus.getStatus(code, input);
-
+            var result = "Game Status: ";
             if(_gameStatus.GameIsWon)
             {
-                return "Game Status: Won";
+                result += "Won";
             }
-
-            return "";
+            else
+            {
+                result += "\nCorrect Numbers: " + _gameStatus.CorrectNumbers;
+            }
+            
+            return result;
         }
     }
 }

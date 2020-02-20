@@ -16,13 +16,17 @@ namespace TDDMasterMindGame
             }
             return true;
         }
-        private bool inputOutofBounds(int[] attempt)
+        public bool inputOutOfBounds(int[] attempt)
         {
-            throw new NotImplementedException();
-
+            for(var i=0; i < attempt.Length; i++)
+            {
+                if (attempt[i] > 6 || attempt[i] < 1)
+                    return false;
+            }
+            return true;
         }
 
-        private bool inputNotUnique(int[] attempt)
+        public bool inputNotUnique(int[] attempt)
         {
             throw new NotImplementedException();
         }

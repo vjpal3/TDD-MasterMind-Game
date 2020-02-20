@@ -28,11 +28,8 @@ namespace TDDMasterMindGame
             if (!_validator.isValid(input))
                 throw new ArgumentException();
 
-            foreach (var i in input)
-            {
-                if(i > 6 || i < 1)
-                    throw new ArgumentException();
-            }
+            if(!_validator.inputOutOfBounds(input))
+                throw new ArgumentOutOfRangeException();
 
             var uniqueValues = new HashSet<int>(input);
 

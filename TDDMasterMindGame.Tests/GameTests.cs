@@ -33,7 +33,7 @@ namespace TDDMasterMindGame.Tests
         {
             game.code = new int[] { 1, 2, 3, 4 };
             var input = new int[] { 1, 2, 3, 7 };
-            Assert.Throws<System.ArgumentException>(() => game.CheckScore(input));
+            Assert.Throws<System.ArgumentOutOfRangeException>(() => game.CheckScore(input));
 
         }
 
@@ -42,7 +42,7 @@ namespace TDDMasterMindGame.Tests
         {
             game.code = new int[] { 1, 2, 3, 4 };
             var input = new int[] { 0, 2, 3, 4 };
-            Assert.Throws<ArgumentException>(() => game.CheckScore(input));
+            Assert.Throws<ArgumentOutOfRangeException>(() => game.CheckScore(input));
         }
 
         [Test]

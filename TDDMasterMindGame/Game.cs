@@ -31,9 +31,7 @@ namespace TDDMasterMindGame
             if(!_validator.inputOutOfBounds(input))
                 throw new ArgumentOutOfRangeException();
 
-            var uniqueValues = new HashSet<int>(input);
-
-            if (uniqueValues.Count() != input.Length)
+            if(!_validator.inputNotUnique(input))
                 throw new Exception("input values must be unique");
 
             for (int i = 0; i < code.Length; i++)

@@ -48,6 +48,7 @@
     <Compile Include="GameInputValidator.cs" />
     <Compile Include="GameStatus.cs" />
     <Compile Include="ICodeGenerator.cs" />
+    <Compile Include="IGameInputValidator.cs" />
     <Compile Include="IGameStatus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

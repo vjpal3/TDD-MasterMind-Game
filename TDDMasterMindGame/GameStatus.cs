@@ -11,7 +11,7 @@ namespace TDDMasterMindGame
         public bool GameIsWon { get; set; }
         public int CorrectNumbers { get; set; }
 
-        public int CorrectPositions;
+        public int CorrectPositions { get; set; }
 
         public void getStatus(int[] code, int[] attempt)
         {
@@ -21,7 +21,7 @@ namespace TDDMasterMindGame
             {
                 if (code[i] == attempt[i])
                 {
-
+                    CorrectPositions++;
                     CorrectNumbers++;
                     continue;
                 }
@@ -33,7 +33,7 @@ namespace TDDMasterMindGame
                     
             }
 
-            if (CorrectNumbers == code.Length)
+            if (CorrectNumbers == code.Length && CorrectPositions == code.Length)
                 GameIsWon = true;
             else
                 GameIsWon = false;

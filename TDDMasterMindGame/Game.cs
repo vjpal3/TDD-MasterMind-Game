@@ -40,11 +40,9 @@ namespace TDDMasterMindGame
             {
                 result += "Won";
             }
-            else
-            {
-                result += "\nCorrect Numbers: " + _gameStatus.CorrectNumbers;
-            }
-            
+            result += "\nCorrect Numbers: " + _gameStatus.CorrectNumbers;
+            result += "\nCorrect Positions: " + _gameStatus.CorrectPositions;
+
             return result;
         }
     }

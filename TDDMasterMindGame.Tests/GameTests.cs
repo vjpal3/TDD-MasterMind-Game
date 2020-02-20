@@ -75,9 +75,9 @@ namespace TDDMasterMindGame.Tests
             var input = new int[] { 1, 2, 3, 4 };
 
             var result = game.CheckScore(input);
-            
 
-            Assert.That(result, Is.EqualTo("Game Status: Won"));
+            var expectedResult = "Game Status: Won\nCorrect Numbers: 4\nCorrect Positions: 4";
+            Assert.That(result, Is.EqualTo(expectedResult));
         }
 
         [Test]
@@ -87,8 +87,8 @@ namespace TDDMasterMindGame.Tests
             var input = new int[] { 1, 2, 5, 3 };
 
             var result = game.CheckScore(input);
-
-            Assert.That(result, Is.EqualTo("Game Status: \nCorrect Numbers: 3"));
+            var expectedResult = "Game Status: \nCorrect Numbers: 3\nCorrect Positions: 2";
+            Assert.That(result, Is.EqualTo(expectedResult));
 
         }
     }

@@ -91,5 +91,17 @@ namespace TDDMasterMindGame.Tests
             Assert.That(result, Is.EqualTo(expectedResult));
 
         }
+
+        [Test]
+        public void If2NumbersAreInCorrectPosition_ReturnGameStatusCorrectPositionsIs2()
+        {
+            game.code = new int[] { 1, 2, 3, 4 };
+            var input = new int[] { 1, 2, 5, 3 };
+
+            var result = game.CheckScore(input);
+            var expectedResult = "Game Status: \nCorrect Numbers: 3\nCorrect Positions: 2";
+            Assert.That(result, Is.EqualTo(expectedResult));
+
+        }
     }
 }

@@ -28,5 +28,32 @@ namespace TDDMasterMindGame.Tests
             Assert.Throws<System.ArgumentException>(() => game.CheckScore(input));
         }
 
+        [Test]
+        public void ThrowExceptionIfNumberInAttemptArrayIsGreaterThan6()
+        {
+            game.code = new int[] { 1, 2, 3, 4 };
+            var input = new int[] { 1, 2, 3, 7 };
+            Assert.Throws<System.ArgumentException>(() => game.CheckScore(input));
+
+        }
+
+        [Test]
+        public void ThrowExceptionIfNumberInAttemptArrayIsLessThan1()
+        {
+            game.code = new int[] { 1, 2, 3, 4 };
+            var input = new int[] { 0, 2, 3, 4 };
+            Assert.Throws<ArgumentException>(() => game.CheckScore(input));
+        }
+
+        [Test]
+        public void ThrowExceptionIfAllNumbersInAttemptArrayAreNotUnique()
+        {
+            game.code = new int[] { 1, 2, 3, 4 };
+            var input = new int[] { 1, 2, 2, 4 };
+
+            Assert.Throws<Exception>(() => game.CheckScore(input));
+
+        }
+
     }
 }

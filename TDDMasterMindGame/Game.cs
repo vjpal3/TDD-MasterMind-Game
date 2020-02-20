@@ -29,6 +29,17 @@ namespace TDDMasterMindGame
             {
                 throw new ArgumentException();
             }
+
+            foreach (var i in input)
+            {
+                if(i > 6 || i < 1)
+                    throw new ArgumentException();
+            }
+
+            var uniqueValues = new HashSet<int>(input);
+
+            if (uniqueValues.Count() != input.Length)
+                throw new Exception("input values must be unique");
         }
     }
 }

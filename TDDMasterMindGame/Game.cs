@@ -22,5 +22,13 @@ namespace TDDMasterMindGame
             _gameStatus = gameStatus;
             _validator = validator;
         }
+
+        public void CheckScore(int[] input)
+        {
+            if(input.Length > 4 || input.Length < 4)
+            {
+                throw new ArgumentException();
+            }
+        }
     }
 }

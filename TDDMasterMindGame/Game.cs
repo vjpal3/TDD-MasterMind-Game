@@ -26,10 +26,10 @@ namespace TDDMasterMindGame
         public string CheckScore(int[] input)
         {
             if (!_validator.isValid(input))
-                throw new ArgumentException();
+                throw new ArgumentException("Length of the array should be exactly 4");
 
             if(!_validator.inputOutOfBounds(input))
-                throw new ArgumentOutOfRangeException();
+                throw new ArgumentOutOfRangeException("Number in the array should be in the range 1 to 6");
 
             if(!_validator.inputNotUnique(input))
                 throw new Exception("input values must be unique");

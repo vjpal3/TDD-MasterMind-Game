@@ -20,7 +20,7 @@ namespace TDDMasterMindGame
         {
             for(var i=0; i < attempt.Length; i++)
             {
-                if (attempt[i] > 6 || attempt[i] < 1)
+                if (attempt[i] >= 6 || attempt[i] < 1)
                     return false;
             }
             return true;

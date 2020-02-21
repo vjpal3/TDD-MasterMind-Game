@@ -27,7 +27,6 @@ namespace TDDMasterMindGame
                 }
                 else if(attempt.Contains(code[i]))
                 {
-                    
                     CorrectNumbers++;
                 }
                     

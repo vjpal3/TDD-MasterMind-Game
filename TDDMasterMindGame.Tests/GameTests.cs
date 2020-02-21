@@ -45,9 +45,7 @@ namespace TDDMasterMindGame.Tests
         public void ThrowExceptionIfAllNumbersInAttemptArrayAreNotUnique()
         {
             var input = new int[] { 1, 2, 2, 4 };
-
             Assert.Throws<Exception>(() => game.CheckScore(input));
-
         }
 
         [Test]
@@ -58,6 +56,7 @@ namespace TDDMasterMindGame.Tests
             var result = game.CheckScore(input);
 
             var expectedResult = "Game Status: Won\nCorrect Numbers: 4\nCorrect Positions: 4";
+            Assert.That(game.code, Is.EquivalentTo(input));
             Assert.That(result, Is.EqualTo(expectedResult));
         }
 
